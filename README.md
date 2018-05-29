@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## rails app in heroku
 
-Things you may want to cover:
+## Setup heroku
 
-* Ruby version
+```
+brew install heroku/brew/heroku
+heroku login # input email address and password
+```
 
-* System dependencies
+## Create Application
 
-* Configuration
+```
+heroku create APP_NAME
+```
 
-* Database creation
+or
 
-* Database initialization
+create in https://dashboard.heroku.com/apps
 
-* How to run the test suite
+## log tailing
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+heroku logs -a APP_NAME --tail
+```
