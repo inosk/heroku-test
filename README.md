@@ -45,6 +45,13 @@ or
 2. More > Run console
 3. heroku run rails db:migrate
 
+## Auto Migration
+
+```
+heroku buildpacks:add https://github.com/gunpowderlabs/buildpack-ruby-rake-deploy-tasks
+heroku config:set DEPLOY_TASKS='db:migrate'
+```
+
 ## log tailing
 
 ```
