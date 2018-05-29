@@ -5,9 +5,15 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/heroku
     docker:
       # specify the version you desire here
       - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          RAILS_ENV: test
+          DB_HOST: 127.0.0.1
+          DB_USERNAME: root
+          DB_PASSWORD: ""
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
