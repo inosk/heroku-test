@@ -49,6 +49,4 @@ test:
 #
 production:
   <<: *default
-  database: book_shelf_production
-  username: book_shelf
-  password: <%= ENV['BOOK_SHELF_DATABASE_PASSWORD'] %>
+  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
